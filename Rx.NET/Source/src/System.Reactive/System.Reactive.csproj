@@ -38,12 +38,12 @@
   </ItemGroup>
 
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
     <PackageReference Include="System.Runtime.InteropServices.WindowsRuntime" Version="4.3.0" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <!-- UWP -->
-  <ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0' ">
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'uap10.0' ">
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
     <PackageReference Include="System.ComponentModel" Version="4.0.1" />
     <PackageReference Include="System.Dynamic.Runtime" Version="4.0.11" />
@@ -51,16 +51,16 @@
   </ItemGroup>
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) or $(TargetFramework.StartsWith('net5.0-windows'))">
     <Compile Include="Platforms\UWP\**\*.cs" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <!-- Windows includes for Desktop and UWP -->
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net472' or $(TargetFramework.StartsWith('uap10.0')) or '$(TargetFramework)' == 'netcoreapp3.1' or $(TargetFramework.StartsWith('net5.0-windows'))">
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'net472' or $(TargetFramework.StartsWith('uap10.0')) or '$(TargetFramework)' == 'netcoreapp3.1' or $(TargetFramework.StartsWith('net5.0-windows'))">
     <Compile Include="Platforms\Windows\**\*.cs" />
     <EmbeddedResource Include="Platforms\Windows\**\*.resx" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <!-- Desktop -->
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net472'">
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'net472'">
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="WindowsBase" />
@@ -68,7 +68,7 @@
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net472' or '$(TargetFramework)' == 'netcoreapp3.1' or $(TargetFramework.StartsWith('net5.0-windows'))">
     <Compile Include="Platforms\Desktop\**\*.cs" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <!-- Designer support -->
   <ItemGroup>
